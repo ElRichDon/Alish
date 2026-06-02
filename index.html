@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alish Hamilton Wellness Theater</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="star">★</div>
+      <h1>Hamilton</h1>
+      <p>Wellness Theater</p>
+    </div>
+
+    <nav>
+      <a href="#home" class="active">⌂ Home</a>
+      <a href="#mood">☻ Mood Check-In</a>
+      <a href="#medicine">⌁ Medicine</a>
+      <a href="#wellness">♡ Wellness</a>
+      <a href="#music">♫ Music</a>
+      <a href="#favorites">☆ Favorites</a>
+    </nav>
+
+    <div class="side-quote">
+      <p>Rise up, take courage, and do it anyway.</p>
+      <span>♡</span>
+    </div>
+  </aside>
+
+  <main class="app" id="home">
+    <section class="hero">
+      <div>
+        <h2>Good Morning, Alisha! ☀️</h2>
+        <p>Welcome back to your theater.</p>
+        <p>Take care of yourself today — you’re worthy of the best performance.</p>
+      </div>
+      <div class="date-card">
+        <strong id="todayDate"></strong>
+        <p>You’ve got this.</p>
+        <p>One step at a time.</p>
+        <span>★</span>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <article class="panel mood-panel" id="mood">
+        <p class="section-label">★ How are you feeling today? ★</p>
+        <div class="mood-grid">
+          <button data-mood="Amazing" data-song="My Shot">★<span>Amazing</span><small>My Shot</small></button>
+          <button data-mood="Good" data-song="The Schuyler Sisters">♡<span>Good</span><small>The Schuyler Sisters</small></button>
+          <button data-mood="Okay" data-song="Dear Theodosia">☁<span>Okay</span><small>Dear Theodosia</small></button>
+          <button data-mood="Struggling" data-song="It's Quiet Uptown">☔<span>Struggling</span><small>It's Quiet Uptown</small></button>
+          <button data-mood="Anxious" data-song="Hamilton Piano Cover">◎<span>Anxious</span><small>Piano Covers</small></button>
+          <button data-mood="Need Support" data-song="Wait For It">☙<span>Need Support</span><small>Wait For It</small></button>
+        </div>
+        <p id="moodMessage">Your mood helps personalize your experience.</p>
+      </article>
+
+      <article class="panel quote-panel">
+        <p class="section-label">Hamilton Quote of the Day</p>
+        <h3>“Look around, look around.”</h3>
+        <p>— Hamilton</p>
+        <div class="silhouette">★</div>
+      </article>
+
+      <article class="panel medicine-panel" id="medicine">
+        <div class="panel-head">
+          <p class="section-label">Medicine Tracker</p>
+          <span id="medDate"></span>
+        </div>
+
+        <div id="medicineList" class="medicine-list"></div>
+
+        <form id="medicineForm" class="medicine-form">
+          <input id="medTime" type="time" required />
+          <input id="medName" placeholder="Medicine name" required />
+          <input id="medDose" placeholder="Dose" />
+          <button>Add Medication</button>
+        </form>
+      </article>
+
+      <article class="panel music-panel" id="music">
+        <p class="section-label">Today's Hamilton Vibe</p>
+        <div class="album">
+          <div class="album-art">★</div>
+          <div>
+            <h3 id="songTitle">Wait For It</h3>
+            <p id="songMood">Fits your mood: Need Support</p>
+          </div>
+        </div>
+        <a id="youtubeBtn" href="https://www.youtube.com/results?search_query=Hamilton+Wait+For+It" target="_blank">▶ Play on YouTube</a>
+        <a id="playlistBtn" href="https://www.youtube.com/results?search_query=Hamilton+Broadway+Playlist" target="_blank">♫ Open Hamilton Playlist</a>
+      </article>
+    </section>
+
+    <section class="lower-grid">
+      <article class="panel wellness-panel" id="wellness">
+        <p class="section-label">Today’s Wellness</p>
+        <div class="meter"><span>Medicine</span><progress id="medProgress" value="0" max="100"></progress><b id="medCount">0/0</b></div>
+        <div class="meter"><span>Water</span><progress id="waterProgress" value="6" max="8"></progress><b>6/8</b></div>
+        <div class="meter"><span>Movement</span><progress value="20" max="30"></progress><b>20/30 min</b></div>
+        <div class="meter"><span>Sleep</span><progress value="7.5" max="8"></progress><b>7.5/8 hrs</b></div>
+        <div class="score">Wellness Score <strong id="wellnessScore">82%</strong></div>
+      </article>
+
+      <article class="panel plan-panel">
+        <p class="section-label">Today's Plan</p>
+        <label><input type="checkbox"> Take medications</label>
+        <label><input type="checkbox"> Drink 8 glasses of water</label>
+        <label><input type="checkbox"> Go for a 20 min walk</label>
+        <label><input type="checkbox"> Journaling / Gratitude</label>
+        <label><input type="checkbox"> Listen to Hamilton</label>
+        <div class="note">Small steps, big impact. One day at a time. ♡</div>
+      </article>
+
+      <article class="panel favorites-panel" id="favorites">
+        <p class="section-label">My Hamilton Favorites</p>
+        <ul>
+          <li>Burn <button data-search="Hamilton Burn">▶</button></li>
+          <li>Satisfied <button data-search="Hamilton Satisfied">▶</button></li>
+          <li>Wait For It <button data-search="Hamilton Wait For It">▶</button></li>
+          <li>Dear Theodosia <button data-search="Hamilton Dear Theodosia">▶</button></li>
+          <li>It's Quiet Uptown <button data-search="Hamilton It's Quiet Uptown">▶</button></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="encouragement">
+      <div>
+        <p class="section-label">Today's Encouragement</p>
+        <h3>You are strong. You are capable. You are enough.</h3>
+      </div>
+      <div class="breath">Take a breath<br><span>You’re doing better than you think.</span></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
